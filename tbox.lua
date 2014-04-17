@@ -17,12 +17,13 @@ local type = type
 -- shown above. Widths < 1 are invalid.
 return function ( s, w )
   if type(s) ~= 'string' or
-    (w and type(w) ~= 'number' or false) or 
+    (w and (type(w) ~= 'number') or false) or 
     (w and w < 1 or false) then
     return nil
   end
+  local s = s
   local sl = SLen(s)
-  local w = w and w or sl + 2
+  local w = w and w or (sl + 2)
   if w < (sl + 2) then w = sl + 2 end
   local u = SRep( '-', w )
   local b = SRep( ' ', (w-sl)/2 )
