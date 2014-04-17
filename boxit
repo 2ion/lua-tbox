@@ -1,0 +1,3 @@
+#!/usr/bin/luajit
+local box = require 'tbox'
+print(box( table.concat(arg, ' ') ))

@@ -1,0 +1,32 @@
+# lua-tbox
+
+Function that puts your ASCII string into an ASCII text box. Like this:
+
+```
++---------------------------------------+
+| This is a chunk of text, neatly boxed |
++---------------------------------------+
+```
+
+## Usage
+
+```lua
+local tbox = require 'tbox'
+print( tbox('This is a chunk of text, neatly boxed') )
+```
+
+## Synposis
+
+```lua
+local boxedstring = tbox( s, w )
+```
+
+where <code>s</code> is the string and the optional <code>w</code> is
+the box width you want. <code>w</code> will be automatically corrected
+to be at least <code>#s+2</code>. If the width was not specified, it
+will be <code>#s+2</code>.
+
+## boxit
+
+Little demonstration program that just boxes all its arguments and
+prints them.
